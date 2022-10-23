@@ -7,7 +7,7 @@
 }
 
 main {
-    padding-top: 7vh;
+    padding-top: 8vh;
     padding-bottom: 10vh;
     background-color: #02243c;
 
@@ -20,70 +20,45 @@ body {
 }
 
 
-/* header */
+/* HEADER */
+
 header {
-    display: flex;
-    justify-content: center;
-    height: 7vh;
-    width: 100%;
-    background-color: #011a2c;
-    position: fixed
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: #011a2c;
-    width: 95%;
-    height: 7vh;
-    align-items: center;
-
+    position: fixed;
+    width: 100vw;
+    background-color: #011a2c
 }
 
 
-.nav__logo a {
-    text-decoration: none;
-}
-
-nav h1 {
+.navbar-light .navbar-brand {
     color: #dfddbe;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 20px;
-}
-
-
-header li {
-    display: inline;
 
 }
 
-
-li a {
-    font-weight: 300;
+.navbar-light .navbar-brand:hover {
     color: #dfddbe;
-    text-align: center;
-
-    padding-right: 20px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-
-.lupa {
-    width: 20px;
 
 }
 
 
-li a:hover {
-    color: #50b298;
-
-}
-
-
-.active {
+.navbar-light .navbar-nav .active .nav-link {
     color: white;
     font-weight: 700;
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 300;
+    color: #dfddbe;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #50b298;
+}
+
+.navbar-light .navbar-toggler {
+    color: #dfddbe;
+    border-color: #dfddbe;
 }
 
 /* FOOTER */
@@ -92,17 +67,18 @@ footer {
     background-color: #011a2c;
     display: flex;
     justify-content: space-between;
-    height: 6vh;
+    height: 8vh;
     align-items: center;
     bottom: 0;
     position: absolute;
     width: 100%;
-    margin-top: 40vh;
+
 
 }
 
 
 footer p {
+    margin: 0%;
     font-size: 12px;
     color: #dfddbe;
     padding-left: 25px;
@@ -115,7 +91,7 @@ footer p {
 
 
 footer img {
-    width: 20px;
+    width: 1.5vw;
 
 }
 
@@ -125,7 +101,7 @@ footer a {
 
 
 #twitter {
-    padding-right: 10px;
+    margin-right: 10px;
 }
 
 
@@ -136,6 +112,7 @@ footer a {
     background-color: aquamarine;
 
 } */
+
 
 .portada {
     width: 100%;
@@ -148,6 +125,7 @@ SECCION 4  */
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .seccion4__grilla {
@@ -171,32 +149,47 @@ SECCION 4  */
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s all ease-in-out;
+
+
+
+
+}
+
+.seccion4__grilla div img:hover {
+    width: 104%;
+    height: 104%;
+
+
+
 
 }
 
 
-.ligainglesa {opacity: 90%;
+.ligainglesa {
+    overflow: hidden;
+
     background-color: red;
     grid-area: ligainglesa;
 }
 
-.ligainglesa:hover {opacity: 100%;}
 
 
-.ligafrancesa {opacity: 90%;
+
+.ligafrancesa {
+    overflow: hidden;
     background-color: green;
-
     grid-area: ligafrancesa;
 }
 
-.ligafrancesa:hover {opacity: 100%;}
 
-.superrugby {opacity: 90%;
+
+.superrugby {
+    overflow: hidden;
     background-color: yellow;
     grid-area: superrugby;
 }
 
-.superrugby:hover {opacity: 100%;}
 
 
 
@@ -256,26 +249,40 @@ SECCION 4  */
     margin-top: 5vh;
     display: flex;
     justify-content: space-between;
-  
+
 
 }
 
 .seccion3__disenos {
-
+    position: relative;
+    overflow: hidden;
     width: 22vw;
+    height: 50vh;
 
 }
 
-.seccion3__disenos img {opacity: 90%;
-    
-  
-
+.seccion3__disenos img {transition: 0.5s all ease-in-out;
+    position: relative;
+    opacity: 100%;
     width: 100%;
+    
 }
 
-.seccion3__disenos img:hover {opacity: 100%;}
 
 
+
+
+.seccion3__disenos__dorso {
+    position: absolute;
+    top: 0;
+}
+
+
+.seccion3__disenos img:hover {
+    opacity: 0%;
+    
+
+}
 
 .seccion3__disenos p {
     padding-top: 0.5vw;
