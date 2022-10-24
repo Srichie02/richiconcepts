@@ -25,7 +25,8 @@ body {
 header {
     position: fixed;
     width: 100vw;
-    background-color: #011a2c
+    background-color: #011a2c;
+    z-index: 100;
 }
 
 
@@ -59,6 +60,10 @@ header {
 .navbar-light .navbar-toggler {
     color: #dfddbe;
     border-color: #dfddbe;
+}
+
+.ml {
+    margin-left: auto;
 }
 
 /* FOOTER */
@@ -120,6 +125,36 @@ footer a {
 
 /* 
 SECCION 4  */
+
+
+@media screen and (max-width: 768px) {
+
+    main {
+        background-color: red;
+    }
+
+    .seccion4__grilla {
+        width: 95%;
+        height: 70vh;
+        display: grid;
+        grid-template-areas:
+            "ligainglesa"
+            "ligafrancesa"
+            "superrugby";
+        grid-template-columns: repeat(1, auto);
+
+        align-content: stretch;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+
+
+
+
+
+}
 
 .seccion4 {
     display: flex;
@@ -257,30 +292,30 @@ SECCION 4  */
     position: relative;
     overflow: hidden;
     width: 22vw;
-    height: 50vh;
+    height: 58vh;
 
 }
 
-.seccion3__disenos img {transition: 0.5s all ease-in-out;
+.seccion3__disenos__frente {
+    transition: 1s all ease-in-out;
     position: relative;
     opacity: 100%;
     width: 100%;
-    
+    backface-visibility: hidden;
+    perspective: 1rem;
+
 }
 
 
-
-
-
-.seccion3__disenos__dorso {
+.seccion3__disenos__dorso img {
+    width: 100%;
     position: absolute;
     top: 0;
 }
 
+.seccion3__disenos__frente:hover {
+    transform: rotateY(180deg);
 
-.seccion3__disenos img:hover {
-    opacity: 0%;
-    
 
 }
 
@@ -297,77 +332,175 @@ SECCION 4  */
 
 /* DISEÑOS */
 
-.main__disenos {
+
+
+.main__disenos { 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #02243c;
 
 }
 
-
-.galeria {
+.disenos__contenedorgrilla {padding-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
     background-color: #02243c;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 1vw;
-
-
 }
 
-.galeria h2 {
-    color: #dfddbe;
-    font-size: 20px;
-    font-weight: 700;
-}
+.disenos__grilla1 {
+    display: grid;
+    grid-template-areas:
+        'foto1 foto2 foto2 foto3'
+        'foto1 foto2 foto2 foto3'
+        'foto4 foto5 foto5 foto6'
+        'foto4 foto5 foto5 foto6'
+        'foto7 foto8 foto8 foto9'
+        'foto7 foto8 foto8 foto9';
 
-.galeria p {
-    padding-bottom: 0.5vw;
-    font-weight: 300;
-    text-align: center;
-    color: #dfddbe;
-
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    
 }
 
 
-.galeria__fila1 {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 2vw;
 
-}
-
-
-.contenedor {
-    width: 95%;
-    margin-top: 1vw;
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-.galeria__disenos {
-    margin: 0vw 1vw 1vw 0vw;
-    background-color: #011a2c;
-    width: 21vw;
-}
-
-.galeria__disenos img {
+.disenos__grilla1 div img {opacity: 90%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.disenos__grilla1 div img:hover {opacity: 100%;
+   transform: scale(1.1);
+
+}
+
+.foto1 {overflow: hidden;
+    grid-area: foto1;
+}
+
+.foto2 {overflow: hidden;
+    grid-area: foto2;
+}
+
+.foto3 {overflow: hidden;
+    grid-area: foto3;
+}
+
+.foto4 {overflow: hidden;
+    grid-area: foto4;
+}
+
+.foto5 {overflow: hidden;
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+
+.foto7 {overflow: hidden;
+    grid-area: foto7;
+}
+
+.foto8 {overflow: hidden;
+    grid-area: foto8;
+}
+
+.foto9 {overflow: hidden;
+    grid-area: foto9;
+}
+
+
+.disenos__grilla2 {
+    display: grid;
+    grid-template-areas:
+        'foto10 foto11 foto11 foto12'
+        'foto10 foto11 foto11 foto12'
+        'foto13 foto14 foto14 foto15'
+        'foto13 foto14 foto14 foto15'
+        'foto16 foto17 foto17 foto18'
+        'foto16 foto17 foto17 foto18';
+        
+
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    
 }
 
 
 
-.galeria__fila2 {
-    display: flex;
-    flex-direction: column;
+.disenos__grilla2 div img {opacity: 90%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.disenos__grilla2 div img:hover {opacity: 100%;
+   transform: scale(1.1);
+
+}
+
+.foto10 {overflow: hidden;
+    grid-area: foto10;
+}
+
+.foto12 {overflow: hidden;
+    grid-area: foto12;
+}
+
+.foto11 {overflow: hidden;
+    grid-area: foto11;
+}
+
+.foto13 {overflow: hidden;
+    grid-area: foto13;
+}
+
+.foto14 {overflow: hidden;
+    grid-area: foto14;
+}
+
+.foto15 {overflow: hidden;
+    grid-area: foto15;
+}
+
+.foto16 {
+    grid-area: foto16;
+}
+
+.foto17 {overflow: hidden;
+    grid-area: foto17;
+}
+
+.foto18 {overflow: hidden;
+    grid-area: foto18;
 }
 
 
 
-/* SOBRE MÍ */
+
+
+
+
+
+
+
+.disenos__titulo {padding-bottom: 2vh;
+    font-weight: 700;
+    color: #dfddbe;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/* SOBRE MÍ*/
 
 
 .main__sobremi {
