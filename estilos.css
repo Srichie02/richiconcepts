@@ -8,8 +8,8 @@
 
 main {
     padding-top: 8vh;
-    padding-bottom: 10vh;
-    background-color: red;
+    padding-bottom: 8vh;
+    background-color: #02243c;
 
 }
 
@@ -27,11 +27,12 @@ header {
     width: 100vw;
     background-color: #011a2c;
     z-index: 100;
-    
+
 }
 
 
-.navbar-light .navbar-brand {padding-left: 1rem;
+.navbar-light .navbar-brand {
+    padding-left: 1rem;
     color: #dfddbe;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -63,7 +64,8 @@ header {
     border-color: #dfddbe;
 }
 
-.ml {padding-right: 1rem;
+.ml {
+    padding-right: 1rem;
     margin-left: auto;
 }
 
@@ -113,6 +115,10 @@ footer a {
 
 /* INDEX */
 
+.index__main {
+    padding-top: 0;
+}
+
 
 /* SECCION 4  */
 
@@ -129,7 +135,7 @@ footer a {
 
 .seccion4__grilla {
     width: 95%;
-    height: 70vh;
+
     display: grid;
     grid-template-areas:
         "ligainglesa superrugby"
@@ -193,10 +199,17 @@ footer a {
 /* SECCION 2 */
 
 .seccion2 {
-    height: 80vh;
-    background-image: url(./imagenes/seccion2.jpg);
-    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4vh;
 
+}
+
+.seccion2 article {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vh;
 }
 
 .seccion2__titulo {
@@ -204,23 +217,29 @@ footer a {
     float: left;
     font-weight: 700;
     color: #dfddbe;
-    padding-left: 40px;
-    padding-top: 40px;
-    font-size: 70px;
+    font-size: 6vw;
     line-height: 1.1;
     text-transform: uppercase;
 }
 
 .seccion2 p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     font-family: 'open sans', sans-serif;
     color: white;
     text-align: justify;
-    width: 40%;
-    padding-right: 40px;
-    padding-top: 40px;
+    width: 45%;
     float: right;
+}
+
+.seccion2__fondo {
+    width: 100%;
+
+
+}
+
+.seccion2__fondo img {
+    width: 100%;
 }
 
 
@@ -231,10 +250,11 @@ footer a {
     align-items: center;
     justify-content: center;
     padding-top: 5vh;
+    padding-bottom: 4vh;
 }
 
 .seccion3__titulo {
-    font-size: 70px;
+    font-size: 6vw;
     font-weight: 700;
     text-align: center;
     color: #dfddbe;
@@ -254,7 +274,7 @@ footer a {
     position: relative;
     overflow: hidden;
     width: 22vw;
-    height: 58vh;
+
 
 }
 
@@ -296,7 +316,7 @@ footer a {
 
 
 
-.main__disenos { 
+.main__disenos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -304,7 +324,8 @@ footer a {
 
 }
 
-.disenos__contenedorgrilla {padding-top: 4vh;
+.disenos__contenedorgrilla {
+    padding-top: 4vh;
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -323,57 +344,68 @@ footer a {
 
     grid-template-columns: repeat(4, auto);
     gap: 10px;
-    
+
 }
 
 
 
-.disenos__grilla1 div img {opacity: 90%;
+.disenos__grilla1 div img {
+    opacity: 90%;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 1s all ease-in-out;
 }
 
-.disenos__grilla1 div img:hover {opacity: 100%;
-   transform: scale(1.1);
+.disenos__grilla1 div img:hover {
+    opacity: 100%;
+    transform: scale(1.1);
 
 }
 
-.foto1 {overflow: hidden;
+.foto1 {
+    overflow: hidden;
     grid-area: foto1;
-    
+
 }
 
-.foto2 {overflow: hidden;
+.foto2 {
+    overflow: hidden;
     grid-area: foto2;
 }
 
-.foto3 {overflow: hidden;
+.foto3 {
+    overflow: hidden;
     grid-area: foto3;
 }
 
-.foto4 {overflow: hidden;
+.foto4 {
+    overflow: hidden;
     grid-area: foto4;
 }
 
-.foto5 {overflow: hidden;
+.foto5 {
+    overflow: hidden;
     grid-area: foto5;
 }
 
-.foto6 {overflow: hidden;
+.foto6 {
+    overflow: hidden;
     grid-area: foto6;
 }
 
-.foto7 {overflow: hidden;
+.foto7 {
+    overflow: hidden;
     grid-area: foto7;
 }
 
-.foto8 {overflow: hidden;
+.foto8 {
+    overflow: hidden;
     grid-area: foto8;
 }
 
-.foto9 {overflow: hidden;
+.foto9 {
+    overflow: hidden;
     grid-area: foto9;
 }
 
@@ -387,47 +419,55 @@ footer a {
         'foto13 foto14 foto14 foto15'
         'foto16 foto17 foto17 foto18'
         'foto16 foto17 foto17 foto18';
-        
+
 
     grid-template-columns: repeat(4, auto);
     gap: 10px;
-    
+
 }
 
 
 
-.disenos__grilla2 div img {opacity: 90%;
+.disenos__grilla2 div img {
+    opacity: 90%;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.disenos__grilla2 div img:hover {opacity: 100%;
-   transform: scale(1.1);
+.disenos__grilla2 div img:hover {
+    opacity: 100%;
+    transform: scale(1.1);
 
 }
 
-.foto10 {overflow: hidden;
+.foto10 {
+    overflow: hidden;
     grid-area: foto10;
 }
 
-.foto12 {overflow: hidden;
+.foto12 {
+    overflow: hidden;
     grid-area: foto12;
 }
 
-.foto11 {overflow: hidden;
+.foto11 {
+    overflow: hidden;
     grid-area: foto11;
 }
 
-.foto13 {overflow: hidden;
+.foto13 {
+    overflow: hidden;
     grid-area: foto13;
 }
 
-.foto14 {overflow: hidden;
+.foto14 {
+    overflow: hidden;
     grid-area: foto14;
 }
 
-.foto15 {overflow: hidden;
+.foto15 {
+    overflow: hidden;
     grid-area: foto15;
 }
 
@@ -435,19 +475,22 @@ footer a {
     grid-area: foto16;
 }
 
-.foto17 {overflow: hidden;
+.foto17 {
+    overflow: hidden;
     grid-area: foto17;
 }
 
-.foto18 {overflow: hidden;
+.foto18 {
+    overflow: hidden;
     grid-area: foto18;
 }
 
-.disenos__titulo {padding-bottom: 2vh;
+.disenos__titulo {
+    padding-bottom: 2vh;
     font-weight: 700;
     color: #dfddbe;
     text-align: center;
-    font-size: 70px;
+    font-size: 6vw;
     text-transform: uppercase;
 }
 
@@ -470,7 +513,8 @@ footer a {
 }
 
 
-.biografia {padding-top: 3vh;
+.biografia {
+    padding-top: 3vh;
     width: 95%;
 
 
@@ -483,11 +527,12 @@ footer a {
     font-weight: 300;
 }
 
-#minombre {padding-bottom: 2vh;
+#minombre {
+    padding-bottom: 2vh;
     font-weight: 700;
     color: #dfddbe;
     text-align: left;
-    font-size: 70px;
+    font-size: 6vw;
     text-transform: uppercase;
 
 }
@@ -618,31 +663,37 @@ footer a {
 }
 
 
-.faqs__titulo {padding-bottom: 2vh;
+.faqs__titulo {
+    padding-bottom: 2vh;
     font-weight: 700;
     color: #dfddbe;
     text-align: left;
-    font-size: 70px;
+    font-size: 6vw;
     text-transform: uppercase;
 
 }
 
 
 
-.faqs__contenedor {padding-top: 2vh;
+.faqs__contenedor {
+    padding-top: 2vh;
     display: block;
     width: 95%;
     padding-bottom: 2vw;
 }
 
 
-.card {background-color: #011a2c;}
+.card {
+    background-color: #011a2c;
+}
 
 .btn-link {
     color: #dfddbe;
 }
 
-.card-body {color: white;}
+.card-body {
+    color: white;
+}
 
 /* CONTACTO */
 
@@ -653,10 +704,11 @@ footer a {
     background-position: -222px;
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.formulario {padding-left: 2.5vw;
+.formulario {
+    padding-left: 2.5vw;
     padding-top: 4vh;
     width: 40%;
     display: flex;
@@ -669,7 +721,7 @@ footer a {
     font-weight: 700;
     color: #dfddbe;
     text-align: left;
-    font-size: 70px;
+    font-size: 6vw;
     text-transform: uppercase;
 }
 
@@ -682,14 +734,14 @@ form label {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 0;
-   
+
 }
 
 
 
 input[type=text] {
     width: 100%;
-    
+
     margin: 8px 0px;
     box-sizing: border-box;
 }
@@ -721,205 +773,286 @@ textarea {
     main {
         padding-top: 6.6vh;
         padding-bottom: 10vh;
-        background-color: #02243c
-    
+        background-color: #02243c;
+        padding-bottom: 6vh;
     }
+
+
+    /* FOOTER */
+
+    footer {
+        background-color: #011a2c;
+        display: flex;
+        justify-content: space-between;
+        height: 8vh;
+        align-items: center;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+
+
+    }
+
+
+    footer p {
+        margin: 0%;
+        font-size: 12px;
+        color: #dfddbe;
+        padding-left: 25px;
+    }
+
+
+    .redes {
+        padding-right: 25px;
+    }
+
+
+    footer img {
+        width: 5vw;
+
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+
+
+    #twitter {
+        margin-right: 10px;
+    }
+
+
+    /* INDEX */
 
     .carousel-item {
-        content:url(./imagenes/ultimosdisenos.jpg);
+        content: url(./imagenes/slidermob1.jpg);
     }
 
-    .a {content: url(./imagenes/ultimosdisenos-dorso.jpg);}
+    .a {
+        content: url(./imagenes/slidermob1.jpg);
+    }
 
 
-    
+
     .seccion4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-
-}
-    
-    
-    .seccion4__grilla {width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         height: auto;
-    display: grid;
-    grid-template-areas:
-        "ligainglesa"
-        "ligafrancesa"
-        "superrugby";
+
+    }
+
+
+    .seccion4__grilla {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-areas:
+            "ligainglesa"
+            "ligafrancesa"
+            "superrugby";
         grid-template-columns: repeat(1, auto);
-        grid-template-rows: repeat(3, 1fr);;
+        grid-template-rows: repeat(3, 1fr);
+        ;
         align-content: stretch;
         gap: 10px;
         padding-top: 4vh;
         margin: 0;
-    
-}
+
+    }
 
 
-.superrugby {
-    overflow: hidden;
-    background-color: yellow;
-    grid-area: superrugby;
-    content: url(./imagenes/ligainglesaa.jpg);
-    width: 100%;
+    .superrugby {
+        overflow: hidden;
+        background-color: yellow;
+        grid-area: superrugby;
+        content: url(./imagenes/superrugby.jpg);
+        width: 100%;
 
-}
-
-
+    }
 
 
-.seccion2 {
-    height: auto;
-    background-image: url(./imagenes/seccion2.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    padding-bottom: 12vh;
-  
-
-}
-
-.seccion2 article {  display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.seccion2__titulo {width: 85%;
-   text-align: center;
-    font-weight: 700;
-    color: #dfddbe;
-    padding-left: 0;
-    padding-top: 40px;
-    font-size: 45px;
-    line-height: 1.1;
-    text-transform: uppercase;
-}
-
-.seccion2 p {
-    font-size: 16px;
-    font-weight: 300;
-    font-family: 'open sans';
-    color: white;
-    text-align: justify;
-    width: 85%;
-    padding-right: 0;
-    padding-top: 1vh;
-    float: none;
-}
-
-.seccion3 {
-    background-color: #02243c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5vh;
-}
-
-.seccion3__titulo {
-    width: 85%;
-    text-align: center;
-     font-weight: 700;
-     color: #dfddbe;
-     padding-left: 0;
-    
-     font-size: 45px;
-     line-height: 1.1;
-     text-transform: uppercase;
-}
-
-.seccion3__contenedor {
-    width: 85%;
-    margin-top: 5vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 
 
-}
+    .seccion2 article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-.seccion3__disenos {
-    position: relative;
-    overflow: hidden;
-    width: 48%;
-    height: auto;
+    }
 
-}
+    .seccion2__titulo {
+        width: 85%;
+        text-align: center;
+        font-weight: 700;
+        color: #dfddbe;
 
-.seccion3__disenos__frente {
-    transition: 1s all ease-in-out;
-    position: relative;
-    opacity: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    perspective: 1rem;
-
-}
+        font-size: 5vh;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
 
 
-.seccion3__disenos__dorso img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-}
+    .seccion2 p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'open sans';
+        color: white;
+        text-align: justify;
+        width: 85%;
+        padding-right: 0;
+        padding-top: 1vh;
+        float: none;
+    }
 
-.seccion3__disenos__frente:hover {
-    transform: rotateY(180deg);
+    .seccion3 {
+        background-color: #02243c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
 
+    .seccion3__titulo {
+        width: 85%;
+        text-align: center;
+        font-weight: 700;
+        color: #dfddbe;
+        padding-left: 0;
+        font-size: 45px;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
 
-}
-
-.seccion3__disenos p {
-    padding-top: 0.5vw;
-    font-weight: 300;
-    text-align: center;
-    color: #dfddbe;
-}
-
-footer {
-    background-color: #011a2c;
-    display: flex;
-    justify-content: space-between;
-    height: 8vh;
-    align-items: center;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-
-
-}
-
-
-footer p {
-    margin: 0%;
-    font-size: 12px;
-    color: #dfddbe;
-    padding-left: 25px;
-}
-
-
-.redes {
-    padding-right: 25px;
-}
+    .seccion3__contenedor {
+        width: 85%;
+        margin-top: 2vh;
+        display: inline;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
 
 
-footer img {
-    width: 5vw;
+    }
 
-}
+    .seccion3__disenos {
+        position: relative;
+        overflow: hidden;
+        width: 48%;
+        height: auto;
+        display: inline-block;
+    }
 
-footer a {
-    text-decoration: none;
-}
+    .seccion3__disenos__frente {
+        transition: 1s all ease-in-out;
+        position: relative;
+        opacity: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        perspective: 1rem;
+
+    }
 
 
-#twitter {
-    margin-right: 10px;
-}
+    .seccion3__disenos__dorso img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .seccion3__disenos__frente:hover {
+        transform: rotateY(180deg);
+
+
+    }
+
+    .seccion3__disenos p {
+        padding-top: 0.5vw;
+        font-weight: 300;
+        text-align: center;
+        color: #dfddbe;
+    }
+
+    /* DISENOS */
+
+
+    .disenos__contenedorgrilla {
+        padding-top: 4vh;
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        background-color: #02243c;
+    }
+
+    .disenos__grilla1 {
+        display: grid;
+        grid-template-areas:
+            'foto1'
+            'foto2'
+            'foto3'
+            'foto4'
+            'foto5'
+            'foto6'
+            'foto7'
+            'foto8'
+            'foto9';
+
+
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+    }
+
+
+    .disenos__grilla1 div img {
+        opacity: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s all ease-in-out;
+    }
+
+
+    .disenos__grilla2 {
+        display: grid;
+        grid-template-areas:
+            'foto10'
+            'foto11'
+            'foto12'
+            'foto13'
+            'foto14'
+            'foto15'
+            'foto16'
+            'foto17'
+            'foto18';
+
+
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+
+    }
+
+
+    .disenos__grilla2 div img {
+        opacity: 100%;
+
+    }
+
+    .disenos__titulo {
+        padding-bottom: 2vh;
+        font-weight: 700;
+        color: #dfddbe;
+        text-align: center;
+        font-size: 5vh;
+        text-transform: uppercase;
+    }
+
+
+
+
+
+
 
 
 
