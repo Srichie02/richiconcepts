@@ -1,78 +1,80 @@
+@import "colores";
+
+
+
 /* reseteo */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
-
 }
 
 main {
     padding-top: 8vh;
     padding-bottom: 8vh;
-    background-color: #02243c;
-
+    background-color: $color-azul;
 }
 
 body {
     position: relative;
     min-height: 100vh;
-
 }
-
 
 /* HEADER */
 
 header {
     position: fixed;
     width: 100vw;
-    background-color: #011a2c;
+    background-color: $color-azul-oscuro;
     z-index: 100;
 
+    .navbar-light {
+
+        .navbar-brand {
+            padding-left: 1rem;
+            color: $color-claro;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+            &:hover {
+                color: $color-claro;
+            }
+        }
+
+        .navbar-nav {
+
+            .active .nav-link {
+                color: white;
+                font-weight: 700;
+            }
+
+
+            .nav-link {
+                font-weight: 300;
+                color: $color-claro;
+
+                &:hover {
+                    color: $color-verde;
+                }
+            }
+        }
+
+        .ml {
+            padding-right: 1rem;
+            margin-left: auto;
+        }
+
+        .navbar-toggler {
+            color: $color-claro;
+            border-color: $color-claro;
+        }
+    }
 }
 
-
-.navbar-light .navbar-brand {
-    padding-left: 1rem;
-    color: #dfddbe;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-}
-
-.navbar-light .navbar-brand:hover {
-    color: #dfddbe;
-
-}
-
-
-.navbar-light .navbar-nav .active .nav-link {
-    color: white;
-    font-weight: 700;
-
-}
-
-.navbar-light .navbar-nav .nav-link {
-    font-weight: 300;
-    color: #dfddbe;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #50b298;
-}
-
-.navbar-light .navbar-toggler {
-    color: #dfddbe;
-    border-color: #dfddbe;
-}
-
-.ml {
-    padding-right: 1rem;
-    margin-left: auto;
-}
 
 /* FOOTER */
 
 footer {
-    background-color: #011a2c;
+    background-color: $color-azul-oscuro;
     display: flex;
     justify-content: space-between;
     height: 8vh;
@@ -81,35 +83,28 @@ footer {
     position: absolute;
     width: 100%;
 
+    p {
+        margin: 0;
+        font-size: 12px;
+        color: $color-claro;
+        padding-left: 25px;
+    }
 
-}
+    .redes {
+        padding-right: 25px;
 
+        img {
+            width: 20px;
+        }
 
-footer p {
-    margin: 0%;
-    font-size: 12px;
-    color: #dfddbe;
-    padding-left: 25px;
-}
+        a {
+            text-decoration: none;
 
-
-.redes {
-    padding-right: 25px;
-}
-
-
-footer img {
-    width: 1.5vw;
-
-}
-
-footer a {
-    text-decoration: none;
-}
-
-
-#twitter {
-    margin-right: 10px;
+            #twitter {
+                margin-right: 10px;
+            }
+        }
+    }
 }
 
 
@@ -119,80 +114,83 @@ footer a {
     padding-top: 0;
 }
 
-
 /* SECCION 4  */
-
-
-
-
 
 .seccion4 {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    .seccion4__grilla {
+        width: 95%;
+        display: grid;
+        grid-template-areas:
+            "ligainglesa superrugby"
+            "ligafrancesa superrugby";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 20vw);
+        margin-top: 6vh;
+        margin-bottom: 5vh;
+        align-content: center;
+        justify-content: center;
+        gap: 20px;
+
+        .ligainglesa {
+            overflow: hidden;
+            grid-area: ligainglesa;
+
+            .seccion4__imagen {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.5s all ease-in-out;
+
+                &:hover {
+                    width: 104%;
+                    height: 104%;
+                }
+            }
+        }
+
+        .ligafrancesa {
+            overflow: hidden;
+            grid-area: ligafrancesa;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.5s all ease-in-out;
+
+                &:hover {
+                    width: 104%;
+                    height: 104%;
+                }
+            }
+        }
+
+        .superrugby {
+            overflow: hidden;
+            grid-area: superrugby;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.5s all ease-in-out;
+
+                &:hover {
+                    width: 104%;
+                    height: 104%;
+                }
+            }
+        }
+    }
+
 }
 
-.seccion4__grilla {
-    width: 95%;
-
-    display: grid;
-    grid-template-areas:
-        "ligainglesa superrugby"
-        "ligafrancesa superrugby";
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 20vw);
-    margin-top: 6vh;
-    margin-bottom: 5vh;
-    align-content: center;
-    justify-content: center;
-    gap: 20px;
-
-}
-
-.seccion4__grilla div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s all ease-in-out;
 
 
-
-
-}
-
-.seccion4__grilla div img:hover {
-    width: 104%;
-    height: 104%;
-
-
-
-
-}
-
-
-.ligainglesa {
-    overflow: hidden;
-    background-color: red;
-    grid-area: ligainglesa;
-}
-
-
-
-
-.ligafrancesa {
-    overflow: hidden;
-    background-color: green;
-    grid-area: ligafrancesa;
-}
-
-
-
-.superrugby {
-    overflow: hidden;
-    background-color: yellow;
-    grid-area: superrugby;
-}
 
 
 
@@ -204,302 +202,148 @@ footer a {
     align-items: center;
     padding-top: 4vh;
 
+
+    article {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2vh;
+
+        .seccion2__titulo {
+            width: 50%;
+            float: left;
+            font-weight: 700;
+            color: $color-claro;
+            font-size: 6vw;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            font-family: 'open sans', sans-serif;
+            color: white;
+            text-align: justify;
+            width: 45%;
+            float: right;
+        }
+    }
+
+    .seccion2__fondo {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
 }
-
-.seccion2 article {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2vh;
-}
-
-.seccion2__titulo {
-    width: 50%;
-    float: left;
-    font-weight: 700;
-    color: #dfddbe;
-    font-size: 6vw;
-    line-height: 1.1;
-    text-transform: uppercase;
-}
-
-.seccion2 p {
-    font-size: 1rem;
-    font-weight: 300;
-    font-family: 'open sans', sans-serif;
-    color: white;
-    text-align: justify;
-    width: 45%;
-    float: right;
-}
-
-.seccion2__fondo {
-    width: 100%;
-
-
-}
-
-.seccion2__fondo img {
-    width: 100%;
-}
-
 
 .seccion3 {
-    background-color: #02243c;
+    background-color: $color-azul;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 5vh;
     padding-bottom: 4vh;
+
+    .seccion3__titulo {
+        font-size: 6vw;
+        font-weight: 700;
+        text-align: center;
+        color: $color-claro;
+        text-transform: uppercase;
+    }
+
+    .seccion3__contenedor {
+        width: 95%;
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-between;
+
+        .seccion3__disenos {
+            position: relative;
+            overflow: hidden;
+            width: 22vw;
+
+            .seccion3__disenos__frente {
+                transition: 1s all ease-in-out;
+                position: relative;
+                opacity: 100%;
+                width: 100%;
+                backface-visibility: hidden;
+                perspective: 1rem;
+
+                &:hover {
+                    transform: rotateY(180deg);
+                }
+            }
+
+            .seccion3__disenos__dorso img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+            }
+
+            p {
+                padding-top: 0.5vw;
+                font-weight: 300;
+                text-align: center;
+                color: $color-claro;
+            }
+        }
+    }
 }
-
-.seccion3__titulo {
-    font-size: 6vw;
-    font-weight: 700;
-    text-align: center;
-    color: #dfddbe;
-    text-transform: uppercase;
-}
-
-.seccion3__contenedor {
-    width: 95%;
-    margin-top: 5vh;
-    display: flex;
-    justify-content: space-between;
-
-
-}
-
-.seccion3__disenos {
-    position: relative;
-    overflow: hidden;
-    width: 22vw;
-
-
-}
-
-.seccion3__disenos__frente {
-    transition: 1s all ease-in-out;
-    position: relative;
-    opacity: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    perspective: 1rem;
-
-}
-
-
-.seccion3__disenos__dorso img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-}
-
-.seccion3__disenos__frente:hover {
-    transform: rotateY(180deg);
-
-
-}
-
-.seccion3__disenos p {
-    padding-top: 0.5vw;
-    font-weight: 300;
-    text-align: center;
-    color: #dfddbe;
-}
-
-
-
 
 
 /* DISEÑOS */
-
-
 
 .main__disenos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #02243c;
+    background-color: $color-azul;
 
-}
+    .disenos__galeria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        padding-top: 3vh;
+        padding-bottom: 4vh;
 
-.disenos__contenedorgrilla {
-    padding-top: 4vh;
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    background-color: #02243c;
-    padding-bottom: 4vh;
-}
+        .disenos__titulo {
+            padding-bottom: 2vh;
+            font-weight: 700;
+            color: $color-claro;
+            text-align: center;
+            font-size: 6vw;
+            text-transform: uppercase;
+        }
 
-.disenos__grilla1 {
-    display: grid;
-    grid-template-areas:
-        'foto1 foto2 foto2 foto3'
-        'foto1 foto2 foto2 foto3'
-        'foto4 foto5 foto5 foto6'
-        'foto4 foto5 foto5 foto6'
-        'foto7 foto8 foto8 foto9'
-        'foto7 foto8 foto8 foto9';
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 30vh);
-
-    gap: 10px;
-
-}
+        .tituloseisnacionesysuperrugby {
+            padding-top: 5vh;
+        }
 
 
+        .disenos__galeria__equipos {
+            display: flex;
+            flex-wrap: wrap;
 
-.disenos__grilla1 div img {
-    opacity: 90%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s all ease-in-out;
-}
+            .foto1 {
+                width: 25%;
+                padding: 1vh;
 
-.disenos__grilla1 div img:hover {
-    opacity: 100%;
-    transform: scale(1.1);
-
-}
-
-.foto1 {
-    overflow: hidden;
-    grid-area: foto1;
-
-}
-
-.foto2 {
-    overflow: hidden;
-    grid-area: foto2;
-}
-
-.foto3 {
-    overflow: hidden;
-    grid-area: foto3;
-}
-
-.foto4 {
-    overflow: hidden;
-    grid-area: foto4;
-}
-
-.foto5 {
-    overflow: hidden;
-    grid-area: foto5;
-}
-
-.foto6 {
-    overflow: hidden;
-    grid-area: foto6;
-}
-
-.foto7 {
-    overflow: hidden;
-    grid-area: foto7;
-}
-
-.foto8 {
-    overflow: hidden;
-    grid-area: foto8;
-}
-
-.foto9 {
-    overflow: hidden;
-    grid-area: foto9;
-}
-
-
-.disenos__grilla2 {
-    display: grid;
-    grid-template-areas:
-        'foto10 foto11 foto11 foto12'
-        'foto10 foto11 foto11 foto12'
-        'foto13 foto14 foto14 foto15'
-        'foto13 foto14 foto14 foto15'
-        'foto16 foto17 foto17 foto18'
-        'foto16 foto17 foto17 foto18';
-
-
-    grid-template-columns: repeat(4, auto);
-    gap: 10px;
-
-}
-
-
-
-.disenos__grilla2 div img {
-    opacity: 90%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.disenos__grilla2 div img:hover {
-    opacity: 100%;
-    transform: scale(1.1);
-
-}
-
-.foto10 {
-    overflow: hidden;
-    grid-area: foto10;
-}
-
-.foto12 {
-    overflow: hidden;
-    grid-area: foto12;
-}
-
-.foto11 {
-    overflow: hidden;
-    grid-area: foto11;
-}
-
-.foto13 {
-    overflow: hidden;
-    grid-area: foto13;
-}
-
-.foto14 {
-    overflow: hidden;
-    grid-area: foto14;
-}
-
-.foto15 {
-    overflow: hidden;
-    grid-area: foto15;
-}
-
-.foto16 {
-    grid-area: foto16;
-}
-
-.foto17 {
-    overflow: hidden;
-    grid-area: foto17;
-}
-
-.foto18 {
-    overflow: hidden;
-    grid-area: foto18;
-}
-
-.disenos__titulo {
-    padding-bottom: 2vh;
-    font-weight: 700;
-    color: #dfddbe;
-    text-align: center;
-    font-size: 6vw;
-    text-transform: uppercase;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 
 /* SOBRE MÍ*/
-
 
 .main__sobremi {
     background-image: url(./imagenes/yofondo);
@@ -510,106 +354,81 @@ footer a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-
 }
 
-
-.biografia {
-    padding-top: 3vh;
+.sobremi__contenedor {
     width: 95%;
-    padding-bottom: 4vh;
 
+    .biografia {
+        padding-top: 3vh;
+        width: 60%;
+        padding-bottom: 4vh;
 
-}
+        h2 {
+            color: $color-claro;
+            font-size: 20px;
+            font-weight: 300;
+        }
 
+        #minombre {
+            padding-bottom: 2vh;
+            font-weight: 700;
+            color: $color-claro;
+            text-align: left;
+            font-size: 5.6vw;
+            text-transform: uppercase;
+        }
 
-.biografia h2 {
-    color: #dfddbe;
-    font-size: 20px;
-    font-weight: 300;
-}
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            font-family: 'open sans', sans-serif;
+            color: white;
+            text-align: justify;
+            line-height: 17px;
+            padding-top: 5px
+        }
 
-#minombre {
-    padding-bottom: 2vh;
-    font-weight: 700;
-    color: #dfddbe;
-    text-align: left;
-    font-size: 6vw;
-    text-transform: uppercase;
+        .parrafo__texto {
+            margin-right: 2vw;
+        }
 
-}
+        .parrafo2 {
+            padding-top: 1vw;
+            display: flex;
+            justify-content: space-between;
 
-.biografia p {
-    font-size: 16px;
-    font-weight: 300;
-    font-family: 'open sans', sans-serif;
-    color: white;
-    text-align: justify;
-    line-height: 17px;
-    padding-top: 5px
-}
+            img {
+                padding-top: 3vw;
+                width: 20vw;
+            }
+        }
 
-.texto {
-    width: 60%;
-    padding-top: 1vw;
-}
+        .parrafo3 {
+            @extend .parrafo2;
 
-.parrafo2 {
-    display: flex;
-    justify-content: space-between;
-}
+            img {
+                padding-top: 3vw;
+                width: 20vw;
+            }
+        }
 
-.parrafo2__texto {
-    width: 60%;
-    margin-right: 2vw;
-}
+        .parrafo4 {
+            @extend .parrafo2;
 
-.parrafo2 img {
-    padding-top: 3vw;
-    width: 20vw;
-}
-
-
-.parrafo3 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.parrafo3__texto {
-    width: 60%;
-    margin-right: 2vw;
-}
-
-
-.parrafo3 img {
-    padding-top: 3vw;
-    width: 20vw;
-}
-
-
-.parrafo4 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.parrafo4__texto {
-    width: 60%;
-    margin-right: 2vw;
-}
-
-
-.parrafo4 img {
-    padding-top: 3vw;
-    width: 20vw;
+            img {
+                padding-top: 3vw;
+                width: 20vw;
+            }
+        }
+    }
 }
 
 /* FAQS */
 
 .faqs__main {
     height: auto;
-    background-color: #02243c;
+    background-color: $color-azul;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -622,6 +441,19 @@ footer a {
     justify-content: space-between;
     width: 95%;
     padding-top: 7vh;
+
+    .faqs__programas__texto {
+        width: 60%;
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            font-family: 'open sans';
+            color: white;
+            text-align: justify;
+            line-height: 17px;
+        }
+    }
 }
 
 .faqs__programas__contenedor {
@@ -629,54 +461,29 @@ footer a {
     justify-content: space-between;
     width: 27vw;
     padding-left: 2vw;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-azul-oscuro;
+        width: 12vw;
+        height: 15vw;
+        border-radius: 10px;
+
+        img {
+            width: 8vw;
+        }
+
+        p {
+            padding-top: 1vw;
+            font-weight: 300;
+            text-align: center;
+            color: $color-claro;
+        }
+    }
 }
-
-.faqs__programas__contenedor div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #011a2c;
-    width: 12vw;
-    height: 15vw;
-    border-radius: 10px;
-}
-
-.faqs__programas img {
-    width: 8vw;
-}
-
-.faqs__programas__texto {
-    width: 60%;
-}
-
-.faqs__programas__texto p {
-    font-size: 16px;
-    font-weight: 300;
-    font-family: 'open sans';
-    color: white;
-    text-align: justify;
-    line-height: 17px;
-}
-
-.faqs__programas__contenedor p {
-    padding-top: 1vw;
-    font-weight: 300;
-    text-align: center;
-    color: #bedfd1;
-}
-
-
-.faqs__titulo {
-    padding-bottom: 2vh;
-    font-weight: 700;
-    color: #dfddbe;
-    text-align: left;
-    font-size: 6vw;
-    text-transform: uppercase;
-
-}
-
 
 
 .faqs__contenedor {
@@ -684,108 +491,113 @@ footer a {
     display: block;
     width: 95%;
     padding-bottom: 2vw;
-}
 
+    .faqs__titulo {
+        padding-bottom: 2vh;
+        font-weight: 700;
+        color: $color-claro;
+        text-align: left;
+        font-size: 6vw;
+        text-transform: uppercase;
+    }
 
-.card {
-    background-color: #011a2c;
-}
+    .card {
+        background-color: $color-azul-oscuro;
 
-.btn-link {
-    color: #dfddbe;
-}
+        .btn-link {
+            color: $color-claro;
+        }
 
-.card-body {
-    color: white;
+        .card-body {
+            font-size: 16px;
+            font-weight: 300;
+            font-family: 'open sans';
+            color: white;
+            text-align: justify;
+            line-height: 17px;
+        }
+    }
 }
 
 /* CONTACTO */
 
 .contacto__main {
-    height: 100vh;
-    // background-image: url(./imagenes/fondocontacto.jpg);
-    // background-size: cover;
-    // background-position: -222px;
     display: flex;
+    justify-content: space-between;
 
+    .formulario {
+        padding-left: 2.5vw;
+        padding-top: 4vh;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-weight: 700;
+            color: $color-claro;
+            text-align: left;
+            font-size: 6vw;
+            text-transform: uppercase;
+        }
+    }
+
+
+
+    form {
+        width: 100%;
+
+        label {
+            color: $color-claro;
+            font-size: 2.5vh;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin: 8px 0px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px 4px;
+            margin: 8px 0px;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+        .boton {
+            background-color: $color-claro;
+            color: #02243c;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-verde;
+            }
+        }
+    }
+
+    .contacto__fondo {
+        overflow: hidden;
+        width: 50%;
+        height: 84vh;
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
-.formulario {
-    padding-left: 2.5vw;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
 
-
-}
-
-.formulario h2 {
-    font-weight: 700;
-    color: #dfddbe;
-    text-align: left;
-    font-size: 6vw;
-    text-transform: uppercase;
-}
-
-form {
-    width: 100%;
-}
-
-form label {
-    color: #dfddbe;
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 0;
-
-}
-
-
-
-input[type=text] {
-    width: 100%;
-
-    margin: 8px 0px;
-    box-sizing: border-box;
-}
-
-textarea {
-    width: 100%;
-    padding: 12px 4px;
-    margin: 8px 0px;
-    box-sizing: border-box;
-    resize: none;
-}
-
-.boton {
-    background-color: #dfddbe;
-    color: #02243c;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.boton:hover {
-    background-color: #50b298
-}
-
-.contacto__fondo {width: 50%;
-    
-
-}
-
-
-.contacto__fondo img {width: 100%;
-height: auto;}
-
+// MEDIA QUERY
 
 @media screen and (max-width: 768px) {
     main {
         padding-top: 6.6vh;
-        padding-bottom: 10vh;
-        background-color: #02243c;
         padding-bottom: 6vh;
     }
 
@@ -793,7 +605,6 @@ height: auto;}
     /* FOOTER */
 
     footer {
-        background-color: #011a2c;
         display: flex;
         justify-content: space-between;
         height: 8vh;
@@ -801,15 +612,12 @@ height: auto;}
         bottom: 0;
         position: absolute;
         width: 100%;
-
-
     }
 
 
     footer p {
         margin: 0%;
         font-size: 12px;
-        color: #dfddbe;
         padding-left: 25px;
     }
 
@@ -821,7 +629,6 @@ height: auto;}
 
     footer img {
         width: 5vw;
-
     }
 
     footer a {
@@ -844,230 +651,319 @@ height: auto;}
         content: url(./imagenes/slidermob1.jpg);
     }
 
-
-
     .seccion4 {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: auto;
 
+        .seccion4__grilla {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-areas:
+                "ligainglesa"
+                "ligafrancesa"
+                "superrugby";
+            grid-template-columns: repeat(1, auto);
+            grid-template-rows: repeat(3, 1fr);
+            ;
+            align-content: stretch;
+            gap: 10px;
+            padding-top: 4vh;
+            margin: 0;
+
+            .superrugby {
+                overflow: hidden;
+                grid-area: superrugby;
+                content: url(./imagenes/superrugby.jpg);
+                width: 100%;
+            }
+        }
     }
-
-
-    .seccion4__grilla {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-areas:
-            "ligainglesa"
-            "ligafrancesa"
-            "superrugby";
-        grid-template-columns: repeat(1, auto);
-        grid-template-rows: repeat(3, 1fr);
-        ;
-        align-content: stretch;
-        gap: 10px;
-        padding-top: 4vh;
-        margin: 0;
-
-    }
-
-
-    .superrugby {
-        overflow: hidden;
-        background-color: yellow;
-        grid-area: superrugby;
-        content: url(./imagenes/superrugby.jpg);
-        width: 100%;
-
-    }
-
-
-
 
     .seccion2 article {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-    }
+        .seccion2__titulo {
+            width: 85%;
+            text-align: center;
+            font-weight: 700;
+            font-size: 7vh;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
 
-    .seccion2__titulo {
-        width: 85%;
-        text-align: center;
-        font-weight: 700;
-        color: #dfddbe;
-
-        font-size: 5vh;
-        line-height: 1.1;
-        text-transform: uppercase;
-    }
-
-
-    .seccion2 p {
-        font-size: 16px;
-        font-weight: 300;
-        font-family: 'open sans';
-        color: white;
-        text-align: justify;
-        width: 85%;
-        padding-right: 0;
-        padding-top: 1vh;
-        float: none;
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            font-family: 'open sans';
+            text-align: justify;
+            width: 85%;
+            padding-right: 0;
+            padding-top: 1vh;
+            float: none;
+        }
     }
 
     .seccion3 {
-        background-color: #02243c;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-top: 5vh;
         padding-bottom: 2vh;
+
+        .seccion3__titulo {
+            width: 85%;
+            text-align: center;
+            font-weight: 700;
+            padding-left: 0;
+            font-size: 7vh;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .seccion3__contenedor {
+            width: 85%;
+            margin-top: 2vh;
+            display: inline;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+
+            .seccion3__disenos {
+                width: 48%;
+                height: auto;
+                display: inline-block;
+            }
+        }
     }
 
-    .seccion3__titulo {
-        width: 85%;
-        text-align: center;
-        font-weight: 700;
-        color: #dfddbe;
-        padding-left: 0;
-        font-size: 45px;
-        line-height: 1.1;
-        text-transform: uppercase;
-    }
-
-    .seccion3__contenedor {
-        width: 85%;
-        margin-top: 2vh;
-        display: inline;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-
-
-    }
-
-    .seccion3__disenos {
-        position: relative;
-        overflow: hidden;
-        width: 48%;
-        height: auto;
-        display: inline-block;
-    }
-
-    .seccion3__disenos__frente {
-        transition: 1s all ease-in-out;
-        position: relative;
-        opacity: 100%;
-        width: 100%;
-        backface-visibility: hidden;
-        perspective: 1rem;
-
-    }
-
-
-    .seccion3__disenos__dorso img {
-        width: 100%;
-        position: absolute;
-        top: 0;
-    }
-
-    .seccion3__disenos__frente:hover {
-        transform: rotateY(180deg);
-
-
-    }
-
-    .seccion3__disenos p {
-        padding-top: 0.5vw;
-        font-weight: 300;
-        text-align: center;
-        color: #dfddbe;
-    }
 
     /* DISENOS */
 
+    .main__disenos {
 
-    .disenos__contenedorgrilla {
-        padding-top: 4vh;
+        .disenos__galeria {
+
+            .disenos__titulo {
+                font-size: 7vh;
+            }
+
+            .disenos__galeria__equipos {
+
+                .foto1 {
+                    width: 50%;
+                    padding: 1vh;
+                }
+            }
+        }
+    }
+
+
+    // FAQS
+
+    .faqs__main {
+
+        .faqs__programas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 85%;
+            padding-top: 7vh;
+
+            .faqs__programas__texto {
+                width: 100%;
+            }
+        }
+
+        .faqs__programas__contenedor {
+            width: 80%;
+            padding-left: 0;
+
+            div {
+                width: 30vw;
+                height: 25vh;
+
+                img {
+                    padding-top: 2vh;
+                    width: 60%;
+                }
+            }
+        }
+
+
+        .faqs__contenedor {
+
+            .faqs__titulo {
+                text-align: center;
+                font-size: 7vh;
+            }
+        }
+    }
+
+
+// SOBRE MI
+
+.main__sobremi {
+    background-image: none;
+}
+
+.sobremi__contenedor {
+    width: 85%;
+
+    .biografia {
+        // padding-top: 3vh;
+        width: 100%;
+        // padding-bottom: 4vh;
+
+        #minombre {
+            text-align: center;
+            font-size: 7vh;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            font-family: 'open sans', sans-serif;
+            color: white;
+            text-align: justify;
+            line-height: 17px;
+            padding-top: 5px
+        }
+
+        .parrafo__texto {
+            margin-right: 0;
+        }
+
+        h2 {text-align: center;
+        }
+
+        .parrafo2 {
+            padding-top: 1vw;
+            display: flex;
+           flex-direction: column;
+           align-items: center;
+
+            img {
+                padding-top: 3vw;
+                width: 50vw;
+            }
+        }
+
+        .parrafo3 { padding-top: 1vw;
+            display: flex;
+           flex-direction: column;
+           align-items: center;
+           
+
+            img {
+                padding-top: 3vw;
+                width: 50vw;
+            }
+        }
+
+        .parrafo4 { padding-top: 1vw;
+            display: flex;
+           flex-direction: column;
+           align-items: center;
+           
+
+            img {
+                padding-top: 3vw;
+                width: 50vw;
+            }
+
+        }
+
+    }
+
+}
+
+    /* CONTACTO */
+
+    .contacto__main {
         display: flex;
         flex-direction: column;
-        width: 95%;
-        background-color: #02243c;
+        align-items: center;
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            padding-top: 4vh;
+            padding-bottom: 4vh;
+            width: 85%;
+
+            h2 {
+                font-size: 7vh;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .boton {
+                margin-top: 1vh;
+            }
+        }
+
+        .contacto__fondo {
+            width: 50%;
+            height: 30vh;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+
+    .navbar-light .navbar-brand {
+        padding-left: 0;
     }
 
-    .disenos__grilla1 {
-        display: grid;
-        grid-template-areas:
-            'foto1'
-            'foto2'
-            'foto3'
-            'foto4'
-            'foto5'
-            'foto6'
-            'foto7'
-            'foto8'
-            'foto9';
-
-
-        grid-template-columns: repeat(1, auto);
-        gap: 10px;
-    }
-
-
-    .disenos__grilla1 div img {
-        opacity: 100%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: 1s all ease-in-out;
-    }
-
-
-    .disenos__grilla2 {
-        display: grid;
-        grid-template-areas:
-            'foto10'
-            'foto11'
-            'foto12'
-            'foto13'
-            'foto14'
-            'foto15'
-            'foto16'
-            'foto17'
-            'foto18';
-
-
-        grid-template-columns: repeat(1, auto);
-        gap: 10px;
-
-    }
-
-
-    .disenos__grilla2 div img {
-        opacity: 100%;
-
-    }
-
-    .disenos__titulo {
-        padding-bottom: 2vh;
-        font-weight: 700;
-        color: #dfddbe;
-        text-align: center;
+    .seccion3__titulo {
         font-size: 5vh;
-        text-transform: uppercase;
+    }
+
+    .seccion2__titulo {
+        font-size: 5vh;
     }
 
 
+    .main__disenos {
+
+        .disenos__galeria {
+
+            .disenos__titulo {
+                font-size: 5vh;
+            }
+
+            .disenos__galeria__equipos {
+                display: inline;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
 
 
-
-
-
-
-
-
-
+                .foto1 {
+                    width: 100%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
 }
