@@ -68,6 +68,16 @@ footer {
   padding-top: 0; }
 
 /* SECCION 4  */
+/*Creamos el bucle para usar los valores del mapa*/
+.ligainglesa {
+  border-style: solid; }
+
+.ligafrancesa {
+  border-style: dotted; }
+
+.superrugby {
+  border-style: double; }
+
 .seccion4 {
   display: flex;
   flex-direction: column;
@@ -84,6 +94,7 @@ footer {
     justify-content: center;
     gap: 20px; }
     .seccion4 .seccion4__grilla .ligainglesa {
+      border-color: #dfddbe;
       overflow: hidden;
       grid-area: ligainglesa; }
       .seccion4 .seccion4__grilla .ligainglesa .seccion4__imagen {
@@ -95,6 +106,7 @@ footer {
           width: 104%;
           height: 104%; }
     .seccion4 .seccion4__grilla .ligafrancesa {
+      border-color: #dfddbe;
       overflow: hidden;
       grid-area: ligafrancesa; }
       .seccion4 .seccion4__grilla .ligafrancesa img {
@@ -106,6 +118,7 @@ footer {
           width: 104%;
           height: 104%; }
     .seccion4 .seccion4__grilla .superrugby {
+      border-color: #dfddbe;
       overflow: hidden;
       grid-area: superrugby; }
       .seccion4 .seccion4__grilla .superrugby img {
@@ -148,6 +161,11 @@ footer {
     .seccion2 .seccion2__fondo img {
       width: 100%; }
 
+.seccion3__titulo {
+  font-size: 6vw;
+  text-align: center;
+  font-weight: 700; }
+
 .seccion3 {
   background-color: #02243c;
   display: flex;
@@ -157,9 +175,6 @@ footer {
   padding-top: 5vh;
   padding-bottom: 4vh; }
   .seccion3 .seccion3__titulo {
-    font-size: 6vw;
-    font-weight: 700;
-    text-align: center;
     color: #dfddbe;
     text-transform: uppercase; }
   .seccion3 .seccion3__contenedor {

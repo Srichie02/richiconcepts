@@ -114,6 +114,21 @@ footer {
 
 /* SECCION 4  */
 
+$ligas: (
+        ligainglesa: solid,
+        ligafrancesa: dotted,
+        superrugby: double
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $liga, $borde in $ligas {
+   .#{$liga} {
+       border-style: $borde;
+       
+      
+   }
+}
+
+
 .seccion4 {
     display: flex;
     flex-direction: column;
@@ -133,7 +148,7 @@ footer {
         justify-content: center;
         gap: 20px;
 
-        .ligainglesa {
+        .ligainglesa { border-color: $color-claro;
             overflow: hidden;
             grid-area: ligainglesa;
 
@@ -150,7 +165,7 @@ footer {
             }
         }
 
-        .ligafrancesa {
+        .ligafrancesa {border-color: $color-claro;
             overflow: hidden;
             grid-area: ligafrancesa;
 
@@ -167,7 +182,7 @@ footer {
             }
         }
 
-        .superrugby {
+        .superrugby {border-color: $color-claro;
             overflow: hidden;
             grid-area: superrugby;
 
@@ -186,11 +201,6 @@ footer {
     }
 
 }
-
-
-
-
-
 
 /* SECCION 2 */
 
@@ -236,6 +246,17 @@ footer {
     }
 }
 
+
+@mixin tituloenseccion3 ($tamano, $alineacion, $grosor) {
+    font-size: $tamano;
+    text-align: $alineacion;
+    font-weight: $grosor;
+ }
+ .seccion3__titulo {
+    @include tituloenseccion3 (6vw, center, 700);
+ }
+ 
+
 .seccion3 {
     background-color: $color-azul;
     display: flex;
@@ -246,9 +267,6 @@ footer {
     padding-bottom: 4vh;
 
     .seccion3__titulo {
-        font-size: 6vw;
-        font-weight: 700;
-        text-align: center;
         color: $color-claro;
         text-transform: uppercase;
     }
