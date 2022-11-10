@@ -1,12 +1,12 @@
-# PreEntrega2+RICCIARDELLI
+# PreEntrega3+RICCIARDELLI
 
-Esta es mi PreEntrega Nro 2 del curso de Desarrollo Web de CODER HOUSE. 
+Esta es mi PreEntrega Nro 3 del curso de Desarrollo Web de CODER HOUSE. 
 
 ## Richi Concepts
-La pagina web es mi pagina personal en donde publicare mis disenos de distintos equipos y selecciones de rugby.
+La pagina web es mi pagina personal en donde publicaré mis disenos de distintos equipos y selecciones de rugby.
 
-La pagina cuenta con 5 secciones adaptadas a vista desktop y 2 secciones adaptadas a mobile (Index.html y Disenos.html).
+La pagina ahora cuenta con todas sus secciones adaptadas a vista desktop y mobile.
 
 ## Comentarios
 
-Tanto las imagenes como los textos aun no son los finales.
+Las imágenes ya fueron actualizadas, los textos finales se modificarán para la entrega final.

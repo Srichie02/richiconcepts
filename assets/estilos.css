@@ -42,6 +42,8 @@ header {
   header .navbar-light .navbar-toggler {
     color: #dfddbe;
     border-color: #dfddbe; }
+    header .navbar-light .navbar-toggler .navbar-toggler-icon {
+      background-image: url(./imagenes/hamburguesa.svg); }
 
 /* FOOTER */
 footer {
@@ -72,7 +74,6 @@ footer {
   padding-top: 0; }
 
 /* SECCION 4  */
-/*Creamos el bucle para usar los valores del mapa*/
 .ligainglesa {
   border-style: solid; }
 
@@ -98,6 +99,7 @@ footer {
     justify-content: center;
     gap: 20px; }
     .seccion4 .seccion4__grilla .ligainglesa {
+      border-width: 3px;
       border-color: #dfddbe;
       overflow: hidden;
       grid-area: ligainglesa; }
@@ -110,6 +112,7 @@ footer {
           width: 104%;
           height: 104%; }
     .seccion4 .seccion4__grilla .ligafrancesa {
+      border-width: 3px;
       border-color: #dfddbe;
       overflow: hidden;
       grid-area: ligafrancesa; }
@@ -122,6 +125,7 @@ footer {
           width: 104%;
           height: 104%; }
     .seccion4 .seccion4__grilla .superrugby {
+      border-width: 3px;
       border-color: #dfddbe;
       overflow: hidden;
       grid-area: superrugby; }
@@ -487,13 +491,14 @@ footer {
       .sobremi__contenedor .biografia .parrafo__texto {
         margin-right: 0; }
       .sobremi__contenedor .biografia h2 {
+        padding-top: 2vh;
         text-align: center; }
       .sobremi__contenedor .biografia .parrafo2, .sobremi__contenedor .biografia .parrafo3, .sobremi__contenedor .biografia .parrafo4 {
         display: flex;
         flex-direction: column;
         align-items: center; }
         .sobremi__contenedor .biografia .parrafo2 img, .sobremi__contenedor .biografia .parrafo3 img, .sobremi__contenedor .biografia .parrafo4 img {
-          width: 50vw; }
+          width: 60vw; }
       .sobremi__contenedor .biografia .parrafo3 {
         display: flex;
         flex-direction: column;

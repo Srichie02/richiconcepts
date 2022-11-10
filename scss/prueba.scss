@@ -75,6 +75,8 @@ header {
         .navbar-toggler {
             color: $color-claro;
             border-color: $color-claro;
+
+            .navbar-toggler-icon {background-image: url(./imagenes/hamburguesa.svg);}
         }
     }
 }
@@ -131,7 +133,7 @@ $ligas: (
     superrugby: double
 );
 
-/*Creamos el bucle para usar los valores del mapa*/
+
 @each $liga,
 $borde in $ligas {
     .#{$liga} {
@@ -158,7 +160,7 @@ $borde in $ligas {
         justify-content: center;
         gap: 20px;
 
-        .ligainglesa {
+        .ligainglesa {border-width: 3px;
             border-color: $color-claro;
             overflow: hidden;
             grid-area: ligainglesa;
@@ -176,7 +178,7 @@ $borde in $ligas {
             }
         }
 
-        .ligafrancesa {
+        .ligafrancesa {border-width: 3px;
             border-color: $color-claro;
             overflow: hidden;
             grid-area: ligafrancesa;
@@ -194,7 +196,7 @@ $borde in $ligas {
             }
         }
 
-        .superrugby {
+        .superrugby {border-width: 3px;
             border-color: $color-claro;
             overflow: hidden;
             grid-area: superrugby;
@@ -765,7 +767,7 @@ $vista: tablet;
                 margin-right: 0;
             }
 
-            h2 {
+            h2 {padding-top: 2vh;
                 text-align: center;
             }
 
@@ -775,7 +777,7 @@ $vista: tablet;
                 align-items: center;
 
                 img {
-                    width: 50vw;
+                    width: 60vw;
                 }
             }
 
