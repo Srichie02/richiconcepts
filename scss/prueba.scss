@@ -20,6 +20,17 @@ body {
     min-height: 100vh;
 }
 
+$vista: desktop;
+
+@if $vista ==desktop {
+    @media only screen and (min-width:768px) {
+        h1 {
+            font-size: 11vh
+        }
+
+    }
+}
+
 /* HEADER */
 
 header {
@@ -115,19 +126,18 @@ footer {
 /* SECCION 4  */
 
 $ligas: (
-        ligainglesa: solid,
-        ligafrancesa: dotted,
-        superrugby: double
-); 
-/*Creamos el bucle para usar los valores del mapa*/
-@each $liga, $borde in $ligas {
-   .#{$liga} {
-       border-style: $borde;
-       
-      
-   }
-}
+    ligainglesa: solid,
+    ligafrancesa: dotted,
+    superrugby: double
+);
 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $liga,
+$borde in $ligas {
+    .#{$liga} {
+        border-style: $borde;
+    }
+}
 
 .seccion4 {
     display: flex;
@@ -148,7 +158,8 @@ $ligas: (
         justify-content: center;
         gap: 20px;
 
-        .ligainglesa { border-color: $color-claro;
+        .ligainglesa {
+            border-color: $color-claro;
             overflow: hidden;
             grid-area: ligainglesa;
 
@@ -165,7 +176,8 @@ $ligas: (
             }
         }
 
-        .ligafrancesa {border-color: $color-claro;
+        .ligafrancesa {
+            border-color: $color-claro;
             overflow: hidden;
             grid-area: ligafrancesa;
 
@@ -182,7 +194,8 @@ $ligas: (
             }
         }
 
-        .superrugby {border-color: $color-claro;
+        .superrugby {
+            border-color: $color-claro;
             overflow: hidden;
             grid-area: superrugby;
 
@@ -199,10 +212,14 @@ $ligas: (
             }
         }
     }
-
 }
 
 /* SECCION 2 */
+
+$estilos: (tamano: 1rem,
+grosor: 300,
+color: white,
+);
 
 .seccion2 {
     display: flex;
@@ -221,16 +238,14 @@ $ligas: (
             float: left;
             font-weight: 700;
             color: $color-claro;
-            font-size: 6vw;
             line-height: 1.1;
             text-transform: uppercase;
         }
 
-        p {
-            font-size: 1rem;
-            font-weight: 300;
+        p {font-size: map-get($estilos, tamano);
+            font-weight: map-get($estilos, grosor);
+            color: map-get($estilos, color);
             font-family: 'open sans', sans-serif;
-            color: white;
             text-align: justify;
             width: 45%;
             float: right;
@@ -247,15 +262,15 @@ $ligas: (
 }
 
 
-@mixin tituloenseccion3 ($tamano, $alineacion, $grosor) {
-    font-size: $tamano;
+@mixin tituloenseccion3 ($alineacion, $grosor) {
     text-align: $alineacion;
     font-weight: $grosor;
- }
- .seccion3__titulo {
-    @include tituloenseccion3 (6vw, center, 700);
- }
- 
+}
+
+.seccion3__titulo {
+    @include tituloenseccion3 (center, 700);
+}
+
 
 .seccion3 {
     background-color: $color-azul;
@@ -333,7 +348,6 @@ $ligas: (
             font-weight: 700;
             color: $color-claro;
             text-align: center;
-            font-size: 6vw;
             text-transform: uppercase;
         }
 
@@ -391,7 +405,6 @@ $ligas: (
             font-weight: 700;
             color: $color-claro;
             text-align: left;
-            font-size: 5.6vw;
             text-transform: uppercase;
         }
 
@@ -513,7 +526,6 @@ $ligas: (
         font-weight: 700;
         color: $color-claro;
         text-align: left;
-        font-size: 6vw;
         text-transform: uppercase;
     }
 
@@ -548,16 +560,13 @@ $ligas: (
         display: flex;
         flex-direction: column;
 
-        h2 {
+        h1 {
             font-weight: 700;
             color: $color-claro;
             text-align: left;
-            font-size: 6vw;
             text-transform: uppercase;
         }
     }
-
-
 
     form {
         width: 100%;
@@ -611,6 +620,17 @@ $ligas: (
 
 // MEDIA QUERY
 
+$vista: tablet;
+
+@if $vista == tablet {
+    @media only screen and (max-width:768px) {
+        h1 {
+            font-size: 7vh
+        }
+
+    }
+}
+
 @media screen and (max-width: 768px) {
     main {
         padding-top: 6.6vh;
@@ -620,42 +640,9 @@ $ligas: (
 
     /* FOOTER */
 
-    footer {
-        display: flex;
-        justify-content: space-between;
-        height: 8vh;
-        align-items: center;
-        bottom: 0;
-        position: absolute;
-        width: 100%;
-    }
-
-
-    footer p {
-        margin: 0%;
-        font-size: 12px;
-        padding-left: 25px;
-    }
-
-
-    .redes {
-        padding-right: 25px;
-    }
-
-
     footer img {
         width: 5vw;
     }
-
-    footer a {
-        text-decoration: none;
-    }
-
-
-    #twitter {
-        margin-right: 10px;
-    }
-
 
     /* INDEX */
 
@@ -663,14 +650,11 @@ $ligas: (
         content: url(./imagenes/slidermob1.jpg);
     }
 
-    .a {
-        content: url(./imagenes/slidermob1.jpg);
-    }
+    .a {content: url(./imagenes/slidermobile2.jpg);}
+
+    .b {content: url(./imagenes/slidermobile3.jpg);}
 
     .seccion4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         height: auto;
 
         .seccion4__grilla {
@@ -706,17 +690,10 @@ $ligas: (
         .seccion2__titulo {
             width: 85%;
             text-align: center;
-            font-weight: 700;
-            font-size: 7vh;
-            line-height: 1.1;
-            text-transform: uppercase;
         }
 
         p {
             font-size: 16px;
-            font-weight: 300;
-            font-family: 'open sans';
-            text-align: justify;
             width: 85%;
             padding-right: 0;
             padding-top: 1vh;
@@ -725,21 +702,13 @@ $ligas: (
     }
 
     .seccion3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         padding-top: 5vh;
         padding-bottom: 2vh;
 
         .seccion3__titulo {
             width: 85%;
-            text-align: center;
-            font-weight: 700;
             padding-left: 0;
-            font-size: 7vh;
             line-height: 1.1;
-            text-transform: uppercase;
         }
 
         .seccion3__contenedor {
@@ -765,10 +734,6 @@ $ligas: (
 
         .disenos__galeria {
 
-            .disenos__titulo {
-                font-size: 7vh;
-            }
-
             .disenos__galeria__equipos {
 
                 .foto1 {
@@ -779,6 +744,62 @@ $ligas: (
         }
     }
 
+
+    // SOBRE MI
+
+    .main__sobremi {
+        background-image: none;
+    }
+
+    .sobremi__contenedor {
+        width: 85%;
+
+        .biografia {
+            width: 100%;
+
+            #minombre {
+                text-align: center;
+            }
+
+            .parrafo__texto {
+                margin-right: 0;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .parrafo2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 50vw;
+                }
+            }
+
+            .parrafo3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 50vw;
+                }
+            }
+
+            .parrafo4 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 50vw;
+                }
+            }
+        }
+    }
 
     // FAQS
 
@@ -816,88 +837,10 @@ $ligas: (
 
             .faqs__titulo {
                 text-align: center;
-                font-size: 7vh;
             }
         }
     }
 
-
-// SOBRE MI
-
-.main__sobremi {
-    background-image: none;
-}
-
-.sobremi__contenedor {
-    width: 85%;
-
-    .biografia {
-        // padding-top: 3vh;
-        width: 100%;
-        // padding-bottom: 4vh;
-
-        #minombre {
-            text-align: center;
-            font-size: 7vh;
-        }
-
-        p {
-            font-size: 16px;
-            font-weight: 300;
-            font-family: 'open sans', sans-serif;
-            color: white;
-            text-align: justify;
-            line-height: 17px;
-            padding-top: 5px
-        }
-
-        .parrafo__texto {
-            margin-right: 0;
-        }
-
-        h2 {text-align: center;
-        }
-
-        .parrafo2 {
-            padding-top: 1vw;
-            display: flex;
-           flex-direction: column;
-           align-items: center;
-
-            img {
-                padding-top: 3vw;
-                width: 50vw;
-            }
-        }
-
-        .parrafo3 { padding-top: 1vw;
-            display: flex;
-           flex-direction: column;
-           align-items: center;
-           
-
-            img {
-                padding-top: 3vw;
-                width: 50vw;
-            }
-        }
-
-        .parrafo4 { padding-top: 1vw;
-            display: flex;
-           flex-direction: column;
-           align-items: center;
-           
-
-            img {
-                padding-top: 3vw;
-                width: 50vw;
-            }
-
-        }
-
-    }
-
-}
 
     /* CONTACTO */
 
@@ -915,9 +858,7 @@ $ligas: (
             padding-bottom: 4vh;
             width: 85%;
 
-            h2 {
-                font-size: 7vh;
-            }
+
         }
 
         form {
@@ -942,6 +883,16 @@ $ligas: (
     }
 }
 
+$vista: mobile;
+
+@if $vista == mobile {
+    @media only screen and (max-width:480px) {
+        h1 {
+            font-size: 5vh;
+        }
+
+    }
+}
 
 
 @media screen and (max-width: 480px) {
@@ -951,22 +902,9 @@ $ligas: (
         padding-left: 0;
     }
 
-    .seccion3__titulo {
-        font-size: 5vh;
-    }
-
-    .seccion2__titulo {
-        font-size: 5vh;
-    }
-
-
     .main__disenos {
 
         .disenos__galeria {
-
-            .disenos__titulo {
-                font-size: 5vh;
-            }
 
             .disenos__galeria__equipos {
                 display: inline;

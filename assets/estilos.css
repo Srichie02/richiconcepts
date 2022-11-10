@@ -14,6 +14,10 @@ body {
   position: relative;
   min-height: 100vh; }
 
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 11vh; } }
+
 /* HEADER */
 header {
   position: fixed;
@@ -145,14 +149,13 @@ footer {
       float: left;
       font-weight: 700;
       color: #dfddbe;
-      font-size: 6vw;
       line-height: 1.1;
       text-transform: uppercase; }
     .seccion2 article p {
       font-size: 1rem;
       font-weight: 300;
-      font-family: 'open sans', sans-serif;
       color: white;
+      font-family: 'open sans', sans-serif;
       text-align: justify;
       width: 45%;
       float: right; }
@@ -162,7 +165,6 @@ footer {
       width: 100%; }
 
 .seccion3__titulo {
-  font-size: 6vw;
   text-align: center;
   font-weight: 700; }
 
@@ -223,7 +225,6 @@ footer {
       font-weight: 700;
       color: #dfddbe;
       text-align: center;
-      font-size: 6vw;
       text-transform: uppercase; }
     .main__disenos .disenos__galeria .tituloseisnacionesysuperrugby {
       padding-top: 5vh; }
@@ -262,7 +263,6 @@ footer {
       font-weight: 700;
       color: #dfddbe;
       text-align: left;
-      font-size: 5.6vw;
       text-transform: uppercase; }
     .sobremi__contenedor .biografia p {
       font-size: 16px;
@@ -344,7 +344,6 @@ footer {
     font-weight: 700;
     color: #dfddbe;
     text-align: left;
-    font-size: 6vw;
     text-transform: uppercase; }
   .faqs__contenedor .card {
     background-color: #011a2c; }
@@ -368,11 +367,10 @@ footer {
     width: 45%;
     display: flex;
     flex-direction: column; }
-    .contacto__main .formulario h2 {
+    .contacto__main .formulario h1 {
       font-weight: 700;
       color: #dfddbe;
       text-align: left;
-      font-size: 6vw;
       text-transform: uppercase; }
   .contacto__main form {
     width: 100%; }
@@ -407,40 +405,25 @@ footer {
     .contacto__main .contacto__fondo img {
       width: 100%; }
 
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 7vh; } }
+
 @media screen and (max-width: 768px) {
   main {
     padding-top: 6.6vh;
     padding-bottom: 6vh; }
   /* FOOTER */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    height: 8vh;
-    align-items: center;
-    bottom: 0;
-    position: absolute;
-    width: 100%; }
-  footer p {
-    margin: 0%;
-    font-size: 12px;
-    padding-left: 25px; }
-  .redes {
-    padding-right: 25px; }
   footer img {
     width: 5vw; }
-  footer a {
-    text-decoration: none; }
-  #twitter {
-    margin-right: 10px; }
   /* INDEX */
   .carousel-item {
     content: url(./imagenes/slidermob1.jpg); }
   .a {
-    content: url(./imagenes/slidermob1.jpg); }
+    content: url(./imagenes/slidermobile2.jpg); }
+  .b {
+    content: url(./imagenes/slidermobile3.jpg); }
   .seccion4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: auto; }
     .seccion4 .seccion4__grilla {
       width: 100%;
@@ -464,35 +447,20 @@ footer {
     align-items: center; }
     .seccion2 article .seccion2__titulo {
       width: 85%;
-      text-align: center;
-      font-weight: 700;
-      font-size: 7vh;
-      line-height: 1.1;
-      text-transform: uppercase; }
+      text-align: center; }
     .seccion2 article p {
       font-size: 16px;
-      font-weight: 300;
-      font-family: 'open sans';
-      text-align: justify;
       width: 85%;
       padding-right: 0;
       padding-top: 1vh;
       float: none; }
   .seccion3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding-top: 5vh;
     padding-bottom: 2vh; }
     .seccion3 .seccion3__titulo {
       width: 85%;
-      text-align: center;
-      font-weight: 700;
       padding-left: 0;
-      font-size: 7vh;
-      line-height: 1.1;
-      text-transform: uppercase; }
+      line-height: 1.1; }
     .seccion3 .seccion3__contenedor {
       width: 85%;
       margin-top: 2vh;
@@ -505,11 +473,39 @@ footer {
         height: auto;
         display: inline-block; }
   /* DISENOS */
-  .main__disenos .disenos__galeria .disenos__titulo {
-    font-size: 7vh; }
   .main__disenos .disenos__galeria .disenos__galeria__equipos .foto1 {
     width: 50%;
     padding: 1vh; }
+  .main__sobremi {
+    background-image: none; }
+  .sobremi__contenedor {
+    width: 85%; }
+    .sobremi__contenedor .biografia {
+      width: 100%; }
+      .sobremi__contenedor .biografia #minombre {
+        text-align: center; }
+      .sobremi__contenedor .biografia .parrafo__texto {
+        margin-right: 0; }
+      .sobremi__contenedor .biografia h2 {
+        text-align: center; }
+      .sobremi__contenedor .biografia .parrafo2, .sobremi__contenedor .biografia .parrafo3, .sobremi__contenedor .biografia .parrafo4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .sobremi__contenedor .biografia .parrafo2 img, .sobremi__contenedor .biografia .parrafo3 img, .sobremi__contenedor .biografia .parrafo4 img {
+          width: 50vw; }
+      .sobremi__contenedor .biografia .parrafo3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .sobremi__contenedor .biografia .parrafo3 img {
+          width: 50vw; }
+      .sobremi__contenedor .biografia .parrafo4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .sobremi__contenedor .biografia .parrafo4 img {
+          width: 50vw; }
   .faqs__main .faqs__programas {
     display: flex;
     flex-direction: column;
@@ -528,53 +524,7 @@ footer {
         padding-top: 2vh;
         width: 60%; }
   .faqs__main .faqs__contenedor .faqs__titulo {
-    text-align: center;
-    font-size: 7vh; }
-  .main__sobremi {
-    background-image: none; }
-  .sobremi__contenedor {
-    width: 85%; }
-    .sobremi__contenedor .biografia {
-      width: 100%; }
-      .sobremi__contenedor .biografia #minombre {
-        text-align: center;
-        font-size: 7vh; }
-      .sobremi__contenedor .biografia p {
-        font-size: 16px;
-        font-weight: 300;
-        font-family: 'open sans', sans-serif;
-        color: white;
-        text-align: justify;
-        line-height: 17px;
-        padding-top: 5px; }
-      .sobremi__contenedor .biografia .parrafo__texto {
-        margin-right: 0; }
-      .sobremi__contenedor .biografia h2 {
-        text-align: center; }
-      .sobremi__contenedor .biografia .parrafo2, .sobremi__contenedor .biografia .parrafo3, .sobremi__contenedor .biografia .parrafo4 {
-        padding-top: 1vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .sobremi__contenedor .biografia .parrafo2 img, .sobremi__contenedor .biografia .parrafo3 img, .sobremi__contenedor .biografia .parrafo4 img {
-          padding-top: 3vw;
-          width: 50vw; }
-      .sobremi__contenedor .biografia .parrafo3 {
-        padding-top: 1vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .sobremi__contenedor .biografia .parrafo3 img {
-          padding-top: 3vw;
-          width: 50vw; }
-      .sobremi__contenedor .biografia .parrafo4 {
-        padding-top: 1vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .sobremi__contenedor .biografia .parrafo4 img {
-          padding-top: 3vw;
-          width: 50vw; }
+    text-align: center; }
   /* CONTACTO */
   .contacto__main {
     display: flex;
@@ -588,8 +538,6 @@ footer {
       padding-top: 4vh;
       padding-bottom: 4vh;
       width: 85%; }
-      .contacto__main .formulario h2 {
-        font-size: 7vh; }
     .contacto__main form {
       display: flex;
       flex-direction: column;
@@ -603,15 +551,13 @@ footer {
       .contacto__main .contacto__fondo img {
         width: 100%; } }
 
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 5vh; } }
+
 @media screen and (max-width: 480px) {
   .navbar-light .navbar-brand {
     padding-left: 0; }
-  .seccion3__titulo {
-    font-size: 5vh; }
-  .seccion2__titulo {
-    font-size: 5vh; }
-  .main__disenos .disenos__galeria .disenos__titulo {
-    font-size: 5vh; }
   .main__disenos .disenos__galeria .disenos__galeria__equipos {
     display: inline;
     overflow-x: scroll;
