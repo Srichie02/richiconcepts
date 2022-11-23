@@ -447,6 +447,7 @@ body {
       margin: 0; }
       .seccion4 .seccion4__grilla .superrugby a {
         width: 100%;
+        height: 100%;
         content: url(./imagenes/superrugby.jpg); }
   .seccion2 article {
     display: flex;
