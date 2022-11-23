@@ -1,6 +1,6 @@
 @import "colores";
 @import "header";
-@import "footer"; 
+@import "footer";
 
 /* reseteo */
 * {
@@ -72,7 +72,8 @@ $borde in $ligas {
         justify-content: center;
         gap: 20px;
 
-        .ligainglesa {border-width: 3px;
+        .ligainglesa {
+            border-width: 3px;
             border-color: $color-claro;
             overflow: hidden;
             grid-area: ligainglesa;
@@ -90,7 +91,8 @@ $borde in $ligas {
             }
         }
 
-        .ligafrancesa {border-width: 3px;
+        .ligafrancesa {
+            border-width: 3px;
             border-color: $color-claro;
             overflow: hidden;
             grid-area: ligafrancesa;
@@ -108,7 +110,8 @@ $borde in $ligas {
             }
         }
 
-        .superrugby {border-width: 3px;
+        .superrugby {
+            border-width: 3px;
             border-color: $color-claro;
             overflow: hidden;
             grid-area: superrugby;
@@ -130,9 +133,10 @@ $borde in $ligas {
 
 /* SECCION 2 */
 
-$estilos: (tamano: 1rem,
-grosor: 300,
-color: white,
+$estilos: (
+    tamano: 1rem,
+    grosor: 300,
+    color: white,
 );
 
 .seccion2 {
@@ -156,7 +160,8 @@ color: white,
             text-transform: uppercase;
         }
 
-        p {font-size: map-get($estilos, tamano);
+        p {
+            font-size: map-get($estilos, tamano);
             font-weight: map-get($estilos, grosor);
             color: map-get($estilos, color);
             font-family: 'open sans', sans-serif;
@@ -183,7 +188,7 @@ color: white,
 
 .seccion3__titulo {
     @include tituloenseccion3 (center, 700);
-    
+
 }
 
 
@@ -196,7 +201,8 @@ color: white,
     padding-top: 5vh;
     padding-bottom: 4vh;
 
-    .seccion3__titulo {font-size: 11vh;
+    .seccion3__titulo {
+        font-size: 11vh;
         color: $color-claro;
         text-transform: uppercase;
     }
@@ -258,7 +264,8 @@ color: white,
         padding-top: 3vh;
         padding-bottom: 4vh;
 
-        .disenos__titulo {font-size: 11vh;
+        .disenos__titulo {
+            font-size: 11vh;
             padding-bottom: 2vh;
             font-weight: 700;
             color: $color-claro;
@@ -537,7 +544,7 @@ color: white,
 
 $vista: tablet;
 
-@if $vista == tablet {
+@if $vista ==tablet {
     @media only screen and (max-width:768px) {
         h1 {
             font-size: 7vh
@@ -562,12 +569,24 @@ $vista: tablet;
     /* INDEX */
 
     .carousel-item {
-        content: url(./imagenes/slidermob1.jpg);
+        a {width: 100%;
+            content: url(./imagenes/slidermob1.jpg);
+        }
+
     }
 
-    .a {content: url(./imagenes/slidermobile2.jpg);}
+    .a {
+        a {width: 100%;
+            content: url(./imagenes/slidermobile2.jpg);
+        }
+    }
 
-    .b {content: url(./imagenes/slidermobile3.jpg);}
+    .b {
+        a {width: 100%;
+            content: url(./imagenes/slidermobile3.jpg);
+        }
+
+    }
 
     .seccion4 {
         height: auto;
@@ -589,10 +608,11 @@ $vista: tablet;
             margin: 0;
 
             .superrugby {
-                overflow: hidden;
-                grid-area: superrugby;
-                content: url(./imagenes/superrugby.jpg);
-                width: 100%;
+
+                a {
+                    width: 100%;
+                    content: url(./imagenes/superrugby.jpg);
+                }
             }
         }
     }
@@ -602,7 +622,8 @@ $vista: tablet;
         flex-direction: column;
         align-items: center;
 
-        .seccion2__titulo {font-size: 7vh;
+        .seccion2__titulo {
+            font-size: 7vh;
             width: 85%;
             text-align: center;
         }
@@ -620,7 +641,8 @@ $vista: tablet;
         padding-top: 5vh;
         padding-bottom: 2vh;
 
-        .seccion3__titulo {font-size: 7vh;
+        .seccion3__titulo {
+            font-size: 7vh;
             width: 85%;
             padding-left: 0;
             line-height: 1.1;
@@ -649,8 +671,9 @@ $vista: tablet;
 
         .disenos__galeria {
 
-            .disenos__titulo {font-size: 7vh;
-                
+            .disenos__titulo {
+                font-size: 7vh;
+
             }
 
             .disenos__galeria__equipos {
@@ -684,7 +707,8 @@ $vista: tablet;
                 margin-right: 0;
             }
 
-            h2 {padding-top: 2vh;
+            h2 {
+                padding-top: 2vh;
                 text-align: center;
             }
 
@@ -804,7 +828,7 @@ $vista: tablet;
 
 $vista: mobile;
 
-@if $vista == mobile {
+@if $vista ==mobile {
     @media only screen and (max-width:480px) {
         h1 {
             font-size: 5vh;
@@ -823,7 +847,8 @@ $vista: mobile;
 
     .main__disenos {
 
-        .disenos__galeria {font-size: 5vh;
+        .disenos__galeria {
+            font-size: 5vh;
 
             .disenos__galeria__equipos {
                 display: inline;

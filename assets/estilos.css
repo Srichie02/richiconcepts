@@ -423,11 +423,14 @@ body {
   footer img {
     width: 5vw; }
   /* INDEX */
-  .carousel-item {
+  .carousel-item a {
+    width: 100%;
     content: url(./imagenes/slidermob1.jpg); }
-  .a {
+  .a a {
+    width: 100%;
     content: url(./imagenes/slidermobile2.jpg); }
-  .b {
+  .b a {
+    width: 100%;
     content: url(./imagenes/slidermobile3.jpg); }
   .seccion4 {
     height: auto; }
@@ -442,11 +445,9 @@ body {
       gap: 10px;
       padding-top: 4vh;
       margin: 0; }
-      .seccion4 .seccion4__grilla .superrugby {
-        overflow: hidden;
-        grid-area: superrugby;
-        content: url(./imagenes/superrugby.jpg);
-        width: 100%; }
+      .seccion4 .seccion4__grilla .superrugby a {
+        width: 100%;
+        content: url(./imagenes/superrugby.jpg); }
   .seccion2 article {
     display: flex;
     flex-direction: column;
