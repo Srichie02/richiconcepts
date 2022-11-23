@@ -1,23 +1,4 @@
 @charset "UTF-8";
-/* reseteo */
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Oswald', sans-serif; }
-
-main {
-  padding-top: 8vh;
-  padding-bottom: 8vh;
-  background-color: #02243c; }
-
-body {
-  position: relative;
-  min-height: 100vh; }
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 11vh; } }
-
 /* HEADER */
 header {
   position: fixed;
@@ -68,6 +49,25 @@ footer {
       text-decoration: none; }
       footer .redes a #twitter {
         margin-right: 10px; }
+
+/* reseteo */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif; }
+
+main {
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  background-color: #02243c; }
+
+body {
+  position: relative;
+  min-height: 100vh; }
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 11vh; } }
 
 /* INDEX */
 .index__main {
@@ -181,6 +181,7 @@ footer {
   padding-top: 5vh;
   padding-bottom: 4vh; }
   .seccion3 .seccion3__titulo {
+    font-size: 11vh;
     color: #dfddbe;
     text-transform: uppercase; }
   .seccion3 .seccion3__contenedor {
@@ -225,6 +226,7 @@ footer {
     padding-top: 3vh;
     padding-bottom: 4vh; }
     .main__disenos .disenos__galeria .disenos__titulo {
+      font-size: 11vh;
       padding-bottom: 2vh;
       font-weight: 700;
       color: #dfddbe;
@@ -450,6 +452,7 @@ footer {
     flex-direction: column;
     align-items: center; }
     .seccion2 article .seccion2__titulo {
+      font-size: 7vh;
       width: 85%;
       text-align: center; }
     .seccion2 article p {
@@ -462,6 +465,7 @@ footer {
     padding-top: 5vh;
     padding-bottom: 2vh; }
     .seccion3 .seccion3__titulo {
+      font-size: 7vh;
       width: 85%;
       padding-left: 0;
       line-height: 1.1; }
@@ -477,6 +481,8 @@ footer {
         height: auto;
         display: inline-block; }
   /* DISENOS */
+  .main__disenos .disenos__galeria .disenos__titulo {
+    font-size: 7vh; }
   .main__disenos .disenos__galeria .disenos__galeria__equipos .foto1 {
     width: 50%;
     padding: 1vh; }
@@ -563,11 +569,13 @@ footer {
 @media screen and (max-width: 480px) {
   .navbar-light .navbar-brand {
     padding-left: 0; }
-  .main__disenos .disenos__galeria .disenos__galeria__equipos {
-    display: inline;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap; }
-    .main__disenos .disenos__galeria .disenos__galeria__equipos .foto1 {
-      width: 100%;
-      display: inline-block; } }
+  .main__disenos .disenos__galeria {
+    font-size: 5vh; }
+    .main__disenos .disenos__galeria .disenos__galeria__equipos {
+      display: inline;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap; }
+      .main__disenos .disenos__galeria .disenos__galeria__equipos .foto1 {
+        width: 100%;
+        display: inline-block; } }

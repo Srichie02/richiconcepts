@@ -1,6 +1,6 @@
 @import "colores";
-
-
+@import "header";
+@import "footer"; 
 
 /* reseteo */
 * {
@@ -30,94 +30,6 @@ $vista: desktop;
 
     }
 }
-
-/* HEADER */
-
-header {
-    position: fixed;
-    width: 100vw;
-    background-color: $color-azul-oscuro;
-    z-index: 100;
-
-    .navbar-light {
-
-        .navbar-brand {
-            color: $color-claro;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-            &:hover {
-                color: $color-claro;
-            }
-        }
-
-        .navbar-nav {
-
-            .active .nav-link {
-                color: white;
-                font-weight: 700;
-            }
-
-
-            .nav-link {
-                font-weight: 300;
-                color: $color-claro;
-
-                &:hover {
-                    color: $color-verde;
-                }
-            }
-        }
-
-        .ml {
-            margin-left: auto;
-        }
-
-        .navbar-toggler {
-            color: $color-claro;
-            border-color: $color-claro;
-
-            .navbar-toggler-icon {background-image: url(./imagenes/hamburguesa.svg);}
-        }
-    }
-}
-
-
-/* FOOTER */
-
-footer {
-    background-color: $color-azul-oscuro;
-    display: flex;
-    justify-content: space-between;
-    height: 8vh;
-    align-items: center;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-
-    p {
-        margin: 0;
-        font-size: 12px;
-        color: $color-claro;
-        padding-left: 25px;
-    }
-
-    .redes {
-        padding-right: 25px;
-
-        img {
-            width: 20px;
-        }
-
-        a {
-            text-decoration: none;
-
-            #twitter {
-                margin-right: 10px;
-            }
-        }
-    }
-}
-
 
 /* INDEX */
 
@@ -271,6 +183,7 @@ color: white,
 
 .seccion3__titulo {
     @include tituloenseccion3 (center, 700);
+    
 }
 
 
@@ -283,7 +196,7 @@ color: white,
     padding-top: 5vh;
     padding-bottom: 4vh;
 
-    .seccion3__titulo {
+    .seccion3__titulo {font-size: 11vh;
         color: $color-claro;
         text-transform: uppercase;
     }
@@ -345,7 +258,7 @@ color: white,
         padding-top: 3vh;
         padding-bottom: 4vh;
 
-        .disenos__titulo {
+        .disenos__titulo {font-size: 11vh;
             padding-bottom: 2vh;
             font-weight: 700;
             color: $color-claro;
@@ -689,7 +602,7 @@ $vista: tablet;
         flex-direction: column;
         align-items: center;
 
-        .seccion2__titulo {
+        .seccion2__titulo {font-size: 7vh;
             width: 85%;
             text-align: center;
         }
@@ -707,7 +620,7 @@ $vista: tablet;
         padding-top: 5vh;
         padding-bottom: 2vh;
 
-        .seccion3__titulo {
+        .seccion3__titulo {font-size: 7vh;
             width: 85%;
             padding-left: 0;
             line-height: 1.1;
@@ -735,6 +648,10 @@ $vista: tablet;
     .main__disenos {
 
         .disenos__galeria {
+
+            .disenos__titulo {font-size: 7vh;
+                
+            }
 
             .disenos__galeria__equipos {
 
@@ -906,7 +823,7 @@ $vista: mobile;
 
     .main__disenos {
 
-        .disenos__galeria {
+        .disenos__galeria {font-size: 5vh;
 
             .disenos__galeria__equipos {
                 display: inline;

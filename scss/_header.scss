@@ -1,0 +1,49 @@
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100vw;
+    background-color: $color-azul-oscuro;
+    z-index: 100;
+
+    .navbar-light {
+
+        .navbar-brand {
+            color: $color-claro;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+            &:hover {
+                color: $color-claro;
+            }
+        }
+
+        .navbar-nav {
+
+            .active .nav-link {
+                color: white;
+                font-weight: 700;
+            }
+
+
+            .nav-link {
+                font-weight: 300;
+                color: $color-claro;
+
+                &:hover {
+                    color: $color-verde;
+                }
+            }
+        }
+
+        .ml {
+            margin-left: auto;
+        }
+
+        .navbar-toggler {
+            color: $color-claro;
+            border-color: $color-claro;
+
+            .navbar-toggler-icon {background-image: url(./imagenes/hamburguesa.svg);}
+        }
+    }
+}

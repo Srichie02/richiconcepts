@@ -1,0 +1,35 @@
+/* FOOTER */
+
+footer {
+    background-color: $color-azul-oscuro;
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    align-items: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+    p {
+        margin: 0;
+        font-size: 12px;
+        color: $color-claro;
+        padding-left: 25px;
+    }
+
+    .redes {
+        padding-right: 25px;
+
+        img {
+            width: 20px;
+        }
+
+        a {
+            text-decoration: none;
+
+            #twitter {
+                margin-right: 10px;
+            }
+        }
+    }
+}
