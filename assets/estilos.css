@@ -59,7 +59,7 @@ footer {
 main {
   padding-top: 8vh;
   padding-bottom: 8vh;
-  background-color: red; }
+  background-color: #02243c; }
 
 body {
   position: relative;
@@ -245,11 +245,11 @@ body {
 
 /* SOBRE MÍ*/
 .main__sobremi {
-  background-image: url(./imagenes/yofondo);
+  background-image: url(./imagenes/yofondo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-x: 58vw;
+  background-position-x: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -400,6 +400,7 @@ body {
       color: #02243c;
       display: inline-block;
       padding: 6px 12px;
+      margin-bottom: 1vh;
       border-radius: 5px;
       cursor: pointer; }
       .contacto__main form .boton:hover {
@@ -407,7 +408,7 @@ body {
   .contacto__main .contacto__fondo {
     overflow: hidden;
     width: 50%;
-    height: 84vh; }
+    height: 87vh; }
     .contacto__main .contacto__fondo img {
       width: 100%; }
 
